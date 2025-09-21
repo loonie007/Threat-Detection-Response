@@ -1,0 +1,43 @@
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Python / scripts (if used)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Virtual Machines
+*.vbox
+*.vbox-prev
+*.vdi
+*.vmdk
+*.ova
+*.iso
+
+# Node/npm (if you ever add frontend stuff)
+node_modules/
+
+# Reports / outputs
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+
+# Secrets (DON’T commit real ones, keep safe separately)
+*.key
+*.pem
+*.crt
+*.env
