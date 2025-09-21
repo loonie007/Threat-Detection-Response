@@ -1,21 +1,41 @@
-MIT License
 
-Copyright (c) 2025 samuel akinleye
+---
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+### 2. docs/lab_manual.md (Template)
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+```markdown
+# SOC Lab Manual
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+This lab manual documents the step-by-step setup, attack simulations, and detections from my SOC project.
+
+---
+
+## 1. Lab Environment Setup
+- VirtualBox setup
+- pfSense firewall configuration
+- LAN segmentation (IT, HR, Marketing, DMZ)
+- Windows Server 2022 (AD + DNS + DHCP)
+- Ubuntu server (Wazuh agent installed)
+- Kali Linux (attacker machine)
+- Windows 10/11 endpoints
+
+📸 Insert screenshots of VirtualBox topology here
+
+---
+
+## 2. Wazuh Deployment
+- Deploy Wazuh Manager (OVA)
+- Configure Wazuh dashboard
+- Add agents (Windows + Ubuntu)
+- Edit `ossec.conf` for active response
+- Restart Wazuh services
+
+📸 Insert screenshots of Wazuh manager and agent connection
+
+---
+
+## 3. Attack Simulation
+### 3.1 SSH Brute Force (Hydra)
+- Kali command:
+```bash
+hydra -l user -P rockyou.txt ssh://192.168.56.101
